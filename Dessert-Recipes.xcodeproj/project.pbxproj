@@ -11,6 +11,8 @@
 		F8D4B5112BD6F966008C983E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4B5102BD6F966008C983E /* ContentView.swift */; };
 		F8D4B5132BD6F966008C983E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D4B5122BD6F966008C983E /* Assets.xcassets */; };
 		F8D4B5172BD6F967008C983E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D4B5162BD6F967008C983E /* Preview Assets.xcassets */; };
+		F8D4B51E2BD751B2008C983E /* DessertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4B51D2BD751B2008C983E /* DessertsViewModel.swift */; };
+		F8D4B5202BD757B7008C983E /* DessertsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4B51F2BD757B7008C983E /* DessertsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		F8D4B5122BD6F966008C983E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8D4B5142BD6F966008C983E /* Dessert_Recipes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dessert_Recipes.entitlements; sourceTree = "<group>"; };
 		F8D4B5162BD6F967008C983E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8D4B51D2BD751B2008C983E /* DessertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsViewModel.swift; sourceTree = "<group>"; };
+		F8D4B51F2BD757B7008C983E /* DessertsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				F8D4B50E2BD6F966008C983E /* Dessert_RecipesApp.swift */,
+				F8D4B51D2BD751B2008C983E /* DessertsViewModel.swift */,
 				F8D4B5102BD6F966008C983E /* ContentView.swift */,
 				F8D4B5122BD6F966008C983E /* Assets.xcassets */,
 				F8D4B5142BD6F966008C983E /* Dessert_Recipes.entitlements */,
 				F8D4B5152BD6F967008C983E /* Preview Content */,
+				F8D4B51F2BD757B7008C983E /* DessertsListView.swift */,
 			);
 			path = "Dessert-Recipes";
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D4B51E2BD751B2008C983E /* DessertsViewModel.swift in Sources */,
+				F8D4B5202BD757B7008C983E /* DessertsListView.swift in Sources */,
 				F8D4B5112BD6F966008C983E /* ContentView.swift in Sources */,
 				F8D4B50F2BD6F966008C983E /* Dessert_RecipesApp.swift in Sources */,
 			);

@@ -11,7 +11,8 @@ import SwiftUI
 struct Dessert_RecipesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DessertsListView()
+            //DessertListView(viewMode: MealsViewModel()
         }
     }
 }
