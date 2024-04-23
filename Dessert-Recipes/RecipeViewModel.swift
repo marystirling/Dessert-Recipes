@@ -71,10 +71,15 @@ class RecipeViewModel: ObservableObject {
     }
 
     
-    var urlString = ""
+    var urlString = "https://themealdb.com/api/json/v1/1/lookup.php?i="
+    var idNum = ""
     @Published var recipeArray: [Recipe] = []
    
     func getData() async {
+        
+        // adding id to the end of string to access specific recipe
+        urlString += idNum
+        
         print("We are accessing \(urlString)")
         guard let url = URL(string: urlString) else {
             print("ERROR: Could not create a URL from \(urlString)")

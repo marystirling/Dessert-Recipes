@@ -7,7 +7,10 @@
 
 import SwiftUI
 
+
 struct RecipeView: View {
+    
+    @StateObject var recipeVM = RecipeViewModel()
     
     var dessert: Dessert
     
@@ -22,12 +25,14 @@ struct RecipeView: View {
             Image(systemName: "figure.run")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(.gray.opacity(0.5), lineWidth: 1)
-                }
-                .padding(.trailing)
+                .padding(.all)
+                
             Spacer()
+            Text(recipeVM.recipeArray.first?.strInstructions ?? "none").font(.largeTitle).bold()
+            
+        }.task {
+            recipeVM.idNum = dessert.idMeal
+            await recipeVM.getData()
         }
     }
 }
