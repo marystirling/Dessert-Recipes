@@ -21,12 +21,24 @@ struct RecipeView: View {
                 .fontWeight(.bold)
                 .lineLimit(1)
             Spacer()
+            AsyncImage(url: URL(string: dessert.strMealThumb)) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                case .success(let image):
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: .infinity)
+                case .failure:
+                    Image(systemName: "photo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: .infinity)
+                }
+            }
+
             
-            Image(systemName: "figure.run")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(.all)
-                
             Spacer()
             Text(recipeVM.recipeArray.first?.strInstructions ?? "none").font(.largeTitle).bold()
             
