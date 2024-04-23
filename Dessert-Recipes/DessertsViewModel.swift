@@ -14,11 +14,7 @@ class DessertsViewModel: ObservableObject {
         let meals: [Dessert]
     }
     
-    struct Dessert: Codable, Hashable {
-        var idMeal: String
-        var strMeal: String
-        var strMealThumb: String // do we need to change to URL??
-    }
+    
     
     @Published var urlString = "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert"
     @Published var mealsArrays: [Dessert] = []

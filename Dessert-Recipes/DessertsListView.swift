@@ -16,7 +16,13 @@ struct DessertsListView: View {
         NavigationStack {
             
             List(dessertsVM.mealsArrays, id: \.self) { dessert in
-                Text(dessert.strMeal).font(.title2)
+                
+                NavigationLink{
+                    RecipeView(dessert: dessert)
+                } label: {
+                    Text(dessert.strMeal).font(.title2)
+                }
+                
             }
             .listStyle(.plain)
             .navigationTitle("Dessert List")
