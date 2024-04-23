@@ -15,9 +15,9 @@ struct DessertsListView: View {
     var body: some View {
         NavigationStack {
             
-            List(dessertsVM.mealsArrays, id: \.self, rowContent: { dessert in
-                Text(dessert.strMeal)
-            })
+            List(dessertsVM.mealsArrays, id: \.self) { dessert in
+                Text(dessert.strMeal).font(.title2)
+            }
             .listStyle(.plain)
             .navigationTitle("Dessert List")
         }

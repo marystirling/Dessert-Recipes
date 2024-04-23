@@ -39,7 +39,10 @@ class DessertsViewModel: ObservableObject {
                 return
             }
             print("JSON returned \(mealsList.meals)")
-            self.mealsArrays = mealsList.meals
+            
+            // sort the meals alphabetically, regardless of case
+            let sortedMeals = mealsList.meals.sorted { $0.strMeal.caseInsensitiveCompare($1.strMeal) == .orderedAscending}
+            self.mealsArrays = sortedMeals
             
             
         } catch {
