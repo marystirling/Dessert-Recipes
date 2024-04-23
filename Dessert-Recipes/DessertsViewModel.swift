@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+@MainActor
 class DessertsViewModel: ObservableObject {
     
     private struct Meals: Codable {

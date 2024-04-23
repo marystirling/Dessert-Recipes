@@ -14,6 +14,7 @@
 		F8D4B5202BD757B7008C983E /* DessertsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4B51F2BD757B7008C983E /* DessertsListView.swift */; };
 		F8D4B5242BD75F94008C983E /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4B5232BD75F94008C983E /* RecipeView.swift */; };
 		F8D4B5262BD823AB008C983E /* Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4B5252BD823AB008C983E /* Dessert.swift */; };
+		F8D4B5282BD827D3008C983E /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4B5272BD827D3008C983E /* RecipeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F8D4B51F2BD757B7008C983E /* DessertsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsListView.swift; sourceTree = "<group>"; };
 		F8D4B5232BD75F94008C983E /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		F8D4B5252BD823AB008C983E /* Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert.swift; sourceTree = "<group>"; };
+		F8D4B5272BD827D3008C983E /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				F8D4B50E2BD6F966008C983E /* Dessert_RecipesApp.swift */,
 				F8D4B5252BD823AB008C983E /* Dessert.swift */,
 				F8D4B51D2BD751B2008C983E /* DessertsViewModel.swift */,
+				F8D4B5272BD827D3008C983E /* RecipeViewModel.swift */,
 				F8D4B5122BD6F966008C983E /* Assets.xcassets */,
 				F8D4B5142BD6F966008C983E /* Dessert_Recipes.entitlements */,
 				F8D4B5152BD6F967008C983E /* Preview Content */,
@@ -152,6 +155,7 @@
 				F8D4B51E2BD751B2008C983E /* DessertsViewModel.swift in Sources */,
 				F8D4B5202BD757B7008C983E /* DessertsListView.swift in Sources */,
 				F8D4B50F2BD6F966008C983E /* Dessert_RecipesApp.swift in Sources */,
+				F8D4B5282BD827D3008C983E /* RecipeViewModel.swift in Sources */,
 				F8D4B5242BD75F94008C983E /* RecipeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
