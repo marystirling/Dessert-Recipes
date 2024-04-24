@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F84D9E862BD987E200EB8EC2 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D9E852BD987E200EB8EC2 /* Recipe.swift */; };
 		F8D4B50F2BD6F966008C983E /* Dessert_RecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4B50E2BD6F966008C983E /* Dessert_RecipesApp.swift */; };
 		F8D4B5132BD6F966008C983E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D4B5122BD6F966008C983E /* Assets.xcassets */; };
 		F8D4B5172BD6F967008C983E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D4B5162BD6F967008C983E /* Preview Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F84D9E852BD987E200EB8EC2 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		F8D4B50B2BD6F966008C983E /* Dessert-Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dessert-Recipes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D4B50E2BD6F966008C983E /* Dessert_RecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert_RecipesApp.swift; sourceTree = "<group>"; };
 		F8D4B5122BD6F966008C983E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				F8D4B50E2BD6F966008C983E /* Dessert_RecipesApp.swift */,
 				F8D4B5252BD823AB008C983E /* Dessert.swift */,
+				F84D9E852BD987E200EB8EC2 /* Recipe.swift */,
 				F8D4B51D2BD751B2008C983E /* DessertsViewModel.swift */,
 				F8D4B5272BD827D3008C983E /* RecipeViewModel.swift */,
 				F8D4B5122BD6F966008C983E /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 			files = (
 				F8D4B5262BD823AB008C983E /* Dessert.swift in Sources */,
 				F8D4B51E2BD751B2008C983E /* DessertsViewModel.swift in Sources */,
+				F84D9E862BD987E200EB8EC2 /* Recipe.swift in Sources */,
 				F8D4B5202BD757B7008C983E /* DessertsListView.swift in Sources */,
 				F8D4B50F2BD6F966008C983E /* Dessert_RecipesApp.swift in Sources */,
 				F8D4B5282BD827D3008C983E /* RecipeViewModel.swift in Sources */,

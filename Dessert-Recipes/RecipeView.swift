@@ -47,31 +47,30 @@ struct RecipeView: View {
                     .multilineTextAlignment(.leading)
                     .padding()
                 
-
+                
                 Text("Ingredients and Measurements")
                     .font(.title3)
                     .fontWeight(.bold)
                     .underline()
-
                 
-                if let ingredient1 = recipeVM.recipeArray.first?.strIngredient1,
-                   !ingredient1.isEmpty,
-                   let measure1 = recipeVM.recipeArray.first?.strMeasure1,
-                   !measure1.isEmpty {
-                    HStack{
-                        Spacer()
-                        Text(ingredient1)
-                            .font(.title2)
+                
+                
+                
+                
+                ForEach(1...20, id: \.self) { index in
+                    if let ingredient = recipeVM.recipeArray.first?.strIngredient(index), !ingredient.isEmpty,
+                       let measure = recipeVM.recipeArray.first?.strMeasure(index), !measure.isEmpty {
+                        HStack {
 
-                        Spacer()
-                        Text(measure1).font(.title2)
-                        Spacer()
+                            Text(ingredient)
+                                .font(.title2)
 
+                            Text(measure)
+                                .font(.title2)
 
+                        }
                     }
-                  
                 }
-                
             }
             .task {
                 recipeVM.idNum = dessert.idMeal
