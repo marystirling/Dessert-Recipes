@@ -37,40 +37,43 @@ struct RecipeView: View {
                 Spacer()
                 Spacer()
                 Text("Instructions")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .underline()
-                
-                Text(recipeVM.recipeArray.first?.strInstructions ?? "none")
-                    .font(.body)
-                    .bold()
-                    .multilineTextAlignment(.leading)
-                    .padding()
-                
-                
-                Text("Ingredients and Measurements")
-                    .font(.title3)
+                    .font(.title)
                     .fontWeight(.bold)
                     .underline()
                 
                 
                 
+                if let instructions = recipeVM.recipeArray.first?.strInstructions, !instructions.isEmpty {
+                    Text(instructions)
+                        .font(.body)
+                        .bold()
+                        .multilineTextAlignment(.leading)
+                        .padding()
+                }
                 
+                Text("Ingredients")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .underline()
                 
-                ForEach(1...20, id: \.self) { index in
-                    if let ingredient = recipeVM.recipeArray.first?.strIngredient(index), !ingredient.isEmpty,
-                       let measure = recipeVM.recipeArray.first?.strMeasure(index), !measure.isEmpty {
-                        HStack {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 10) {
+                        ForEach(1...20, id: \.self) { index in
+                            if let ingredient = recipeVM.recipeArray.first?.strIngredient(index), !ingredient.isEmpty,
+                               let measure = recipeVM.recipeArray.first?.strMeasure(index), !measure.isEmpty {
 
-                            Text(ingredient)
-                                .font(.title2)
-
-                            Text(measure)
-                                .font(.title2)
-
+                                Text("\(measure) \(ingredient)")
+                                    .font(.title2)
+                                    .multilineTextAlignment(.leading)
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.leading)
+                                
+                            }
                         }
                     }
+                    
                 }
+                
             }
             .task {
                 recipeVM.idNum = dessert.idMeal

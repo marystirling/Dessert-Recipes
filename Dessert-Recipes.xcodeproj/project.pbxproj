@@ -43,6 +43,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F84D9E872BD9902E00EB8EC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8D4B5232BD75F94008C983E /* RecipeView.swift */,
+				F8D4B51F2BD757B7008C983E /* DessertsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F84D9E882BD9914B00EB8EC2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F84D9E852BD987E200EB8EC2 /* Recipe.swift */,
+				F8D4B5252BD823AB008C983E /* Dessert.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F84D9E892BD9916900EB8EC2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F8D4B51D2BD751B2008C983E /* DessertsViewModel.swift */,
+				F8D4B5272BD827D3008C983E /* RecipeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		F8D4B5022BD6F965008C983E = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +89,13 @@
 		F8D4B50D2BD6F966008C983E /* Dessert-Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				F84D9E892BD9916900EB8EC2 /* ViewModels */,
+				F84D9E882BD9914B00EB8EC2 /* Models */,
+				F84D9E872BD9902E00EB8EC2 /* Views */,
 				F8D4B50E2BD6F966008C983E /* Dessert_RecipesApp.swift */,
-				F8D4B5252BD823AB008C983E /* Dessert.swift */,
-				F84D9E852BD987E200EB8EC2 /* Recipe.swift */,
-				F8D4B51D2BD751B2008C983E /* DessertsViewModel.swift */,
-				F8D4B5272BD827D3008C983E /* RecipeViewModel.swift */,
 				F8D4B5122BD6F966008C983E /* Assets.xcassets */,
 				F8D4B5142BD6F966008C983E /* Dessert_Recipes.entitlements */,
 				F8D4B5152BD6F967008C983E /* Preview Content */,
-				F8D4B51F2BD757B7008C983E /* DessertsListView.swift */,
-				F8D4B5232BD75F94008C983E /* RecipeView.swift */,
 			);
 			path = "Dessert-Recipes";
 			sourceTree = "<group>";
