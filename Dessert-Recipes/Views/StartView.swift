@@ -11,30 +11,53 @@ struct StartView: View {
     @State private var isDessertsListViewPresented = false
 
     var body: some View {
-        VStack {
-            Text("Fetch a Dessert")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.bottom, 50)
+        ZStack {
+            Color(UIColor(hue: 0.55, saturation: 0.28, brightness: 0.85, alpha: 1.0)) // Pale blue color
+                .ignoresSafeArea()
             
-            Button(action: {
-                isDessertsListViewPresented = true
-            }) {
-                Text("Browse Desserts")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+            VStack {
+                Spacer()
+                
+                Text("Fetch a Dessert")
+                    .font(.system(size: 60)) // Change "YourCustomFont" to the name of the font you want to use
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 50)
+                    .monospaced()
+                    .lineLimit(3)
+                
+                
+                Image("cupcake")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(Circle())
+                
+                Spacer()
+                
+                
+                Button(action: {
+                    isDessertsListViewPresented = true
+                }) {
+                    Text("Browse Desserts")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .padding()
+                        .monospaced()
+                        .foregroundColor(.white)
+                        .background(Color(UIColor(hue: 0.9, saturation: 0.24, brightness: 0.8, alpha: 1.0) ))
+                        .cornerRadius(20)
+                }
+                .sheet(isPresented: $isDessertsListViewPresented) {
+                    DessertsListView()
+                }
+                
+                Spacer()
             }
-            .sheet(isPresented: $isDessertsListViewPresented) {
-                DessertsListView()
-            }
+            .padding()
         }
-        .padding()
     }
 }
+
 
 struct StartView_Previews: PreviewProvider {
     static var previews: some View {
