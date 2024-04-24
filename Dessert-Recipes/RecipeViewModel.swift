@@ -14,25 +14,26 @@ class RecipeViewModel: ObservableObject {
         let meals: [Recipe]
     }
     
-    
-    
-    
     var urlString = "https://themealdb.com/api/json/v1/1/lookup.php?i="
     var idNum = ""
     @Published var recipeArray: [Recipe] = []
     
-   
+    
+    // allows us to retrieve JSON data from API
     func getData() async {
         
         // adding id to the end of string to access specific recipe
         urlString += idNum
         
-        print("We are accessing \(urlString)")
+        print("Accessing \(urlString)")
+        
         guard let url = URL(string: urlString) else {
             print("ERROR: Could not create a URL from \(urlString)")
             return
         }
-        print("Accessed!")
+        
+        print("Access successful")
+        
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             
@@ -41,23 +42,27 @@ class RecipeViewModel: ObservableObject {
                 print("ERROR: Could not decode JSON data")
                 return
             }
-            print("JSON returned \(recipeList.meals)")
+            
+            print("JSON decoded successfully for desired recipe.")
             
             if let firstRecipe = recipeList.meals.first {
-                            self.recipeArray = [firstRecipe] // Assign the first recipe to an array
-                        } else {
-                            print("No recipes found")
-                        }
-            print(self.recipeArray)
+                self.recipeArray = [firstRecipe]
+            } else {
+                print("No recipes found")
+            }
+
+            
         } catch {
             print("ERROR: Could not get data from \(urlString)")
         }
         
     }
-
+    
     
 }
 
+
+// Take index as parameter and returns ingredient or measurement at that index
 extension Recipe {
     func strIngredient(_ index: Int) -> String? {
         switch index {

@@ -20,12 +20,16 @@ class DessertsViewModel: ObservableObject {
     @Published var mealsArrays: [Dessert] = []
     
     func getData() async {
-        print("We are accessing \(urlString)")
+        
+        print("Accessing \(urlString)")
+        
         guard let url = URL(string: urlString) else {
             print("ERROR: Could not create a URL from \(urlString)")
             return
         }
-        print("Accessed!")
+        
+        print("Access successful")
+        
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             
@@ -34,7 +38,8 @@ class DessertsViewModel: ObservableObject {
                 print("ERROR: Could not decode JSON data")
                 return
             }
-            print("JSON returned \(mealsList.meals)")
+            
+            print("JSON decoded successfully for dessert list.")
             
             // sort the meals alphabetically, regardless of case
             let sortedMeals = mealsList.meals.sorted { $0.strMeal.caseInsensitiveCompare($1.strMeal) == .orderedAscending}
