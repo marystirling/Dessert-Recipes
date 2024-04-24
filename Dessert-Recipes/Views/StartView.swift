@@ -9,14 +9,14 @@ import SwiftUI
 
 struct StartView: View {
     @State private var isDessertsListViewPresented = false
-
+    
     var body: some View {
         ZStack {
             Color(UIColor(hue: 0.55, saturation: 0.28, brightness: 0.85, alpha: 1.0)) // Pale blue color
                 .ignoresSafeArea()
             
             VStack {
-                Spacer()
+                
                 
                 Text("Fetch a Dessert")
                     .font(.system(size: 60)) // Change "YourCustomFont" to the name of the font you want to use

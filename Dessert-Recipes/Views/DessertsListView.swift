@@ -9,10 +9,10 @@ import SwiftUI
 
 struct DessertsListView: View {
     
-    //var desserts = ["cookie", "pie", "cake", "brownie"]
     @StateObject var dessertsVM = DessertsViewModel()
     
     var body: some View {
+        
         NavigationStack {
             
             List(dessertsVM.mealsArrays, id: \.self) { dessert in
@@ -21,12 +21,19 @@ struct DessertsListView: View {
                     RecipeView(dessert: dessert)
                 } label: {
                     Text(dessert.strMeal).font(.title2)
-                }
+                    
+                }.listRowBackground(Color(UIColor(hue: 0.55, saturation: 0.28, brightness: 0.85, alpha: 1.0)))
                 
             }
-            .listStyle(.plain)
-            .navigationTitle("Dessert List")
+            .listStyle(.sidebar)
+            .navigationTitle("All Desserts").monospaced()
+            
+            
+            
+            
         }
+        
+        
         .task {
             await dessertsVM.getData()
         }
