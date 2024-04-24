@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F84D9E862BD987E200EB8EC2 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D9E852BD987E200EB8EC2 /* Recipe.swift */; };
+		F84D9E8B2BD9943000EB8EC2 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D9E8A2BD9943000EB8EC2 /* StartView.swift */; };
 		F8D4B50F2BD6F966008C983E /* Dessert_RecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4B50E2BD6F966008C983E /* Dessert_RecipesApp.swift */; };
 		F8D4B5132BD6F966008C983E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D4B5122BD6F966008C983E /* Assets.xcassets */; };
 		F8D4B5172BD6F967008C983E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D4B5162BD6F967008C983E /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		F84D9E852BD987E200EB8EC2 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		F84D9E8A2BD9943000EB8EC2 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		F8D4B50B2BD6F966008C983E /* Dessert-Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dessert-Recipes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D4B50E2BD6F966008C983E /* Dessert_RecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert_RecipesApp.swift; sourceTree = "<group>"; };
 		F8D4B5122BD6F966008C983E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			children = (
 				F8D4B5232BD75F94008C983E /* RecipeView.swift */,
 				F8D4B51F2BD757B7008C983E /* DessertsListView.swift */,
+				F84D9E8A2BD9943000EB8EC2 /* StartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				F8D4B5262BD823AB008C983E /* Dessert.swift in Sources */,
 				F8D4B51E2BD751B2008C983E /* DessertsViewModel.swift in Sources */,
 				F84D9E862BD987E200EB8EC2 /* Recipe.swift in Sources */,
+				F84D9E8B2BD9943000EB8EC2 /* StartView.swift in Sources */,
 				F8D4B5202BD757B7008C983E /* DessertsListView.swift in Sources */,
 				F8D4B50F2BD6F966008C983E /* Dessert_RecipesApp.swift in Sources */,
 				F8D4B5282BD827D3008C983E /* RecipeViewModel.swift in Sources */,
@@ -313,6 +317,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fetch a Dessert";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -351,6 +356,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fetch a Dessert";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
