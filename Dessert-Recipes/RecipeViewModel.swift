@@ -70,10 +70,16 @@ class RecipeViewModel: ObservableObject {
         var dateModified: String?
     }
 
+    struct IngredientMeasurementPair {
+        let ingredient: String
+        let measurement: String
+    }
+    
     
     var urlString = "https://themealdb.com/api/json/v1/1/lookup.php?i="
     var idNum = ""
     @Published var recipeArray: [Recipe] = []
+    
    
     func getData() async {
         
@@ -107,5 +113,7 @@ class RecipeViewModel: ObservableObject {
         }
         
     }
+
     
 }
+
