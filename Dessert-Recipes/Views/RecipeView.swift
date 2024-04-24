@@ -10,9 +10,10 @@ struct RecipeView: View {
         ScrollView {
             VStack(alignment: .center){
                 Text(dessert.strMeal)
-                    .font(.largeTitle)
+                    .font(.system(size: 50))
                     .fontWeight(.bold)
-                    .lineLimit(2)
+                    .lineLimit(4)
+                    .monospaced()
                 
                 Spacer()
                 
@@ -25,6 +26,7 @@ struct RecipeView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(maxWidth: 350)
+                            .cornerRadius(20)
                     case .failure:
                         Image(systemName: "photo")
                             .resizable()
@@ -39,13 +41,16 @@ struct RecipeView: View {
                 Text("Instructions")
                     .font(.title)
                     .fontWeight(.bold)
+                    .monospaced()
                     .underline()
+                
+                
                 
                 
                 
                 if let instructions = recipeVM.recipeArray.first?.strInstructions, !instructions.isEmpty {
                     Text(instructions)
-                        .font(.body)
+                        .font(.title3)
                         .bold()
                         .multilineTextAlignment(.leading)
                         .padding()
@@ -54,14 +59,14 @@ struct RecipeView: View {
                 Text("Ingredients")
                     .font(.title)
                     .fontWeight(.bold)
-                    .underline()
+                    .underline().monospaced()
                 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 10) {
                         ForEach(1...20, id: \.self) { index in
                             if let ingredient = recipeVM.recipeArray.first?.strIngredient(index), !ingredient.isEmpty,
                                let measure = recipeVM.recipeArray.first?.strMeasure(index), !measure.isEmpty {
-
+                                
                                 Text("\(measure) \(ingredient)")
                                     .font(.title2)
                                     .multilineTextAlignment(.leading)
@@ -79,7 +84,7 @@ struct RecipeView: View {
                 recipeVM.idNum = dessert.idMeal
                 await recipeVM.getData()
             }
-        }
+        }.background(Color(UIColor(hue: 0.55, saturation: 0.28, brightness: 0.85, alpha: 1.0)))
     }
 }
 

@@ -50,7 +50,7 @@ class RecipeViewModel: ObservableObject {
             } else {
                 print("No recipes found")
             }
-
+            
             
         } catch {
             print("ERROR: Could not get data from \(urlString)")
